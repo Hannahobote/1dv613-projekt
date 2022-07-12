@@ -18,6 +18,7 @@ export default function Patienter() {
 
         async function fetchUserData() {
             // use this lnk later for deployment: `http://localhost:3000/api/minasidor/${auth.currentUser.email}
+            // gör detta till en selec lista
             const res = await fetch(`https://3000-hannahobote-1dv613proje-nco6amnwrs3.ws-eu53.gitpod.io/api/minasidor/`, {
                 method: 'GET',
                 headers: {
