@@ -1,25 +1,34 @@
-import mongoose from 'mongoose'
+import mongoose, { isObjectIdOrHexString, isValidObjectId } from 'mongoose'
 
-// for mina sidor
-export const minaSidorSchema = new mongoose.Schema({
-  name: {
+// for patient info
+export const patientSchema = new mongoose.Schema({
+  namn: {
     type: String,
     required: true,
   },
-  surname: {
+  efternamn: {
     type: String,
     required: true,
   },
-  phonenr: {
+  personnr: {
     type: Number,
     required: true
   },
-  email: {
+  address: {
     type: String,
     required: true,
     unique: true
   },
-  label: {
+  mobilnr: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  kontaktperson: {
+    type: String,
+    required: true
+  },
+  anhorig: {
     type: String,
     required: true
   }
@@ -27,4 +36,4 @@ export const minaSidorSchema = new mongoose.Schema({
   timestamps: true
 })
 
-export const MinaSidor = mongoose.models.MinaSidor || mongoose.model('MinaSidor', minaSidorSchema);
+export const Patieny = mongoose.models.Patient || mongoose.model('Patient', patientSchema);

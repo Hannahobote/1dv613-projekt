@@ -35,7 +35,7 @@ export default function Navbar() {
           </li>
 
             <li className="nav-item">
-              <Link href="/Patienter">
+              <Link href="/patient">
                 <a className="nav-link">Patienter</a>
               </Link>
             </li>

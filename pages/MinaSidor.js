@@ -19,8 +19,8 @@ export default function MinaSidor() {
   useEffect(() => {
 
     async function fetchUserData() {
-
-      const res = await fetch(`http://localhost:3000/api/minasidor/${auth.currentUser.email}`, {
+      // use this lnk later for deployment: `http://localhost:3000/api/minasidor/${auth.currentUser.email}
+      const res = await fetch(`https://3000-hannahobote-1dv613proje-nco6amnwrs3.ws-eu53.gitpod.io/api/minasidor/${auth.currentUser.email}`, {
         method: 'GET',
         headers: {
           "Accept": "application/json",
