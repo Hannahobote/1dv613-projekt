@@ -13,7 +13,6 @@ export default function Patient() {
     const [anhorig, setAnhorig] = useState("")
     const [address, setAddress] = useState("")
 
-    async function handleSubmit(e) {
         useEffect(() => {
 
             async function fetchUserData() {
@@ -40,7 +39,7 @@ export default function Patient() {
         
             fetchUserData()
           }, [])
-        }
+    
     return (
       <div>
         <Navbar/>

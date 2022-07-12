@@ -12,12 +12,12 @@ export const patientSchema = new mongoose.Schema({
   },
   personnr: {
     type: Number,
-    required: true
+    required: true,
+    unique: true
   },
   address: {
     type: String,
     required: true,
-    unique: true
   },
   mobilnr: {
     type: String,
@@ -36,4 +36,4 @@ export const patientSchema = new mongoose.Schema({
   timestamps: true
 })
 
-export const Patieny = mongoose.models.Patient || mongoose.model('Patient', patientSchema);
+export const Patient = mongoose.models.Patient || mongoose.model('Patient', patientSchema);
